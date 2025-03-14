@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.calculator span:not(.error-message) {
+  font-weight: 600;
+  background-color: hsl(202, 86%, 94%);
+  color: hsl(200, 24%, 40%);
+  padding: 0.5rem;
+}
+
+body {
+  height: 95vh;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(202, 86%, 94%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container */
+
+.container {
+  max-width: 45rem;
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  margin: 15px;
+}
+
+/* calculator form */
+
+.calculator {
+  max-width: 50%;
+  padding: 2rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+/* form */
+
+.calculator form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.calculator form .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator form .header h1 {
+  margin: 0;
+  text-wrap: nowrap;
+  font-size: 1.2rem;
+}
+
+.calculator form .header button {
+  border: none;
+  background-color: inherit;
+  color: hsl(200, 24%, 40%);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.calculator form div[class$="__field"] label {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.calculator form .field {
+  display: flex;
+  border: 1px solid hsla(200, 24%, 40%, 0.527);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  transition: all 0.3s;
+}
+
+.calculator form .field:focus-within,
+.calculator form .field:hover {
+  border-color: hsl(200, 24%, 40%);
+}
+
+.calculator form > div {
+  margin-bottom: 1rem;
+}
+
+.calculator form .mortgage-type__field .field {
+  border: none;
+  display: block;
+}
+
+.calculator form .mortgage__type label {
+  font-size: 1rem !important;
+}
+
+.calculator form .mortgage-type__field .field .mortgage__type {
+  border: 1px solid;
+  border-color: hsla(200, 24%, 40%, 0.527);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.calculator form .mortgage-type__field .field .mortgage__type:last-child {
+  margin-bottom: 0;
+}
+
+.calculator form .mortgage-type__field .field .mortgage__type label {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.calculator form .field input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.calculator form #group {
+  display: flex;
+  gap: 1rem;
+}
+
+.calculator form #group > div {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.calculator form #group > div > .field {
+  display: flex;
+}
+
+.calculator form #group > div > .field input {
+  width: 50%;
+}
+
+/* customized radio buttons */
+
+input {
+  border: none;
+  outline: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  outline: 1px solid hsl(200, 24%, 40%);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.5rem 0 0.25rem;
+  outline-offset: 2px;
+}
+
+.mortgage__type {
+  transition: all 0.3s;
+}
+
+.mortgage__type label {
+  cursor: pointer;
+}
+
+.mortgage__type:hover {
+  border-color: hsl(61, 70%, 52%) !important;
+}
+
+input[type="radio"]:checked + label::before {
+  outline-color: hsl(61, 70%, 52%);
+  background-color: hsl(61, 70%, 52%);
+}
+
+.mortgage__type:has(input[type="radio"]:checked) {
+  border-color: hsl(61, 70%, 52%) !important;
+  background-color: hsla(61, 70%, 52%, 0.193);
+}
+
+.calculator form button[type="submit"] {
+  background-color: hsl(61, 70%, 52%);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.75rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.calculator form button[type="submit"]:hover {
+  background-color: hsl(62, 72%, 76%);
+}
+
+/* results */
+
+.results-section {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+
+  background-color: hsl(202, 55%, 16%);
+  color: white;
+  border-bottom-left-radius: 5rem;
+}
+
+.results-section > div {
+  scale: 0.9;
+}
+
+.results-section h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.results-section p {
+  font-size: 0.8rem;
+  color: hsl(206, 40%, 76%);
+}
+
+.results {
+  display: none;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 1rem;
+  text-align: start;
+}
+
+.results h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.results > p,
+.results h3 {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: hsl(206, 40%, 76%);
+}
+
+.results .results__banner {
+  background-color: hsl(200, 60%, 12%);
+  border-top: 0.25rem solid hsl(61, 70%, 52%);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.results .results__banner .monthly-repayments p {
+  color: hsl(61, 70%, 52%);
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid hsl(200, 24%, 40%);
+}
+
+/* error state */
+
+.field.error {
+  border-color: hsl(4, 69%, 50%) !important;
+  position: relative;
+}
+
+.field.error > span {
+  background-color: hsl(4, 69%, 50%);
+  color: white;
+}
+
+.error-message {
+  color: hsl(4, 69%, 50%) !important;
+  font-size: 0.8rem;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    overflow-y: visible;
+}
+
+.container .header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem;
+}
+
+.calculator {
+    max-width: 100%;
+  }
+
+  #group {
+    flex-flow: column;
+  }
+
+  #group > div {
+    width: 100% !important;
+  }
+
+  button[type="submit"] {
+    align-self: center !important;
+  }
+
+  .results-section {
+    border-radius: 0;
+  }
+}
+
+/* attribution */
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.5rem 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

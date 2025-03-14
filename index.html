@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="calculator">
+        <form>
+          <div class="header">
+            <h1>Mortgage Calculator</h1>
+            <button type="reset">Clear All</button>
+          </div>
+
+          <div class="mortgage-amount__field">
+            <label for="mortgage-amount">Mortgage Amount</label>
+            <div class="field">
+              <span>&pound;</span>
+              <input
+                type="text"
+                id="mortgage-amount"
+                name="mortgage-amount"
+                required
+              />
+            </div>
+          </div>
+
+          <div id="group">
+            <div class="mortgage-term__field">
+              <label for="mortgage-term">Mortgage Term</label>
+              <div class="field">
+                <input
+                  type="text"
+                  id="mortgage-term"
+                  name="mortgage-term"
+                  required
+                />
+                <span>years</span>
+              </div>
+            </div>
+
+            <div class="interest-rate__field">
+              <label for="interest-rate">Interest Rate</label>
+              <div class="field">
+                <input
+                  type="text"
+                  id="interest-rate"
+                  name="interest-rate"
+                  required
+                />
+                <span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mortgage-type__field">
+            <label for="mortgage-type">Mortgage Type</label>
+            <div class="field">
+              <div class="mortgage__type">
+                <input
+                  type="radio"
+                  id="repayment"
+                  name="mortgage-type"
+                  value="repayment"
+                />
+                <label for="repayment">Repayment</label>
+              </div>
+              <!---->
+              <div class="mortgage__type">
+                <input
+                  type="radio"
+                  id="interest-only"
+                  name="mortgage-type"
+                  value="interest-only"
+                />
+                <label for="interest-only">Interest Only</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">
+            <img src="assets/images/icon-calculator.svg" />Calculate Repayments
+          </button>
+        </form>
+      </section>
+
+      <section class="results-section">
+        <div class="results-shown-here">
+          <img
+            src="assets/images/illustration-empty.svg"
+            alt="result shown here"
+          />
+          <h2>Results shown here</h2>
+          <p>
+            Complete the form and click "calculate repayments" to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+
+        <div class="results">
+          <h2>Your Results</h2>
+          <p>Your results are shown below based on the information you provided. To adjuct the results, edit the form and click "calculate repayments" again.</p>
+          <div class="results__banner">
+            <div class="monthly-repayments">
+              <h3>your monthly repayments</h3>
+              <p><span>&pound;</span><span id="monthly-repayments-value"></span></p>
+            </div>
+            <div class="total-repayments">
+              <h3>Total you'll repay over the term</h3>
+              <p><span>&pound;</span><span id="total-repayments-value"></span></p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded with 🖤 by
+      <a href="https://github.com/ayman-soliman-1783" target="_blank"
+        >Ayman Soliman</a
+      >.
+    </div>
+  </body>
+</html>
