@@ -14,9 +14,6 @@ This is a solution to the [Mortgage repayment calculator challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -41,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Challenge Solution](https://www.frontendmentor.io/solutions/css-custom-properties-flexbox-js-including-dom-manipulation-I-jUV5DIzr)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Preview](https://ayman-soliman-1783.github.io/mortgage-repayment-calculator-main/)
 
 ## My process
 
