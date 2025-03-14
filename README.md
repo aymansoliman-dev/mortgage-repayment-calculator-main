@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Challenge Solution](https://www.frontendmentor.io/solutions/css-custom-properties-flexbox-js-including-dom-manipulation-I-jUV5DIzr)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -57,7 +57,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned to customize ```<input>``` elements, and how to customize their design according to the state of validation. I also learned how to apply clean code on functions.
+I learned to customize ```<input>``` elements, and how to customize their design according to the state of validation. I also learned how to apply clean code to functions.
 
 ```html
 <input type="radio" .../>
@@ -142,7 +142,7 @@ function addErrorMsg(field) {
 
 ### Continued development
 
-I need to continue focusing on JavaScript advanced concepts to handle upcoming responsive design demands.
+I must continue focusing on advanced JavaScript concepts to handle upcoming responsive design demands.
 
 ### Useful resources
 
