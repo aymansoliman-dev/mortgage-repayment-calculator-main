@@ -12,7 +12,7 @@
 }
 
 body {
-  height: 95vh;
+  min-height: 95vh;
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: hsl(202, 86%, 94%);
@@ -303,13 +303,8 @@ input[type="radio"]:checked + label::before {
 /* media queries */
 
 @media (max-width: 768px) {
-  body {
-    height: auto;
-  }
-
   .container {
     flex-direction: column;
-    overflow-y: visible;
   }
 
   .container .header {
