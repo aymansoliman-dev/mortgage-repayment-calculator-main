@@ -73,6 +73,7 @@ body {
   color: hsl(200, 24%, 40%);
   text-decoration: underline;
   cursor: pointer;
+  padding: 1px 0;
 }
 
 .calculator form div[class$="__field"] > label {
