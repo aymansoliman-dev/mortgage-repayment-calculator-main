@@ -48,6 +48,7 @@ body {
 
 .calculator form {
   height: 100%;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -73,9 +74,10 @@ body {
   cursor: pointer;
 }
 
-.calculator form div[class$="__field"] label {
+.calculator form div[class$="__field"] > label {
   margin: 0;
   font-size: 0.9rem;
+  color: hsl(200, 24%, 40%);
 }
 
 .calculator form .field {
@@ -103,7 +105,7 @@ body {
 }
 
 .calculator form .mortgage__type label {
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
 }
 
 .calculator form .mortgage-type__field .field .mortgage__type {
@@ -126,6 +128,8 @@ body {
 }
 
 .calculator form .field input[type="text"] {
+  font-weight: 600 !important;
+  font-family: 'Plus Jakarta Sans';
   flex: 1;
   padding: 0.5rem;
 }
