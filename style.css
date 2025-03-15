@@ -283,6 +283,12 @@ input[type="radio"]:checked + label::before {
   border-bottom: 1px solid hsl(200, 24%, 40%);
 }
 
+.results .results__banner .total-repayments p span {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 /* error state */
 
 .field.error {
