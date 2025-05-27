@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Challenge Solution](https://www.frontendmentor.io/solutions/css-custom-properties-flexbox-js-including-dom-manipulation-I-jUV5DIzr)
-- Live Site URL: [Live Preview](https://ayman-soliman-1783.github.io/mortgage-repayment-calculator-main/)
+- Live Site URL: [Live Preview](https://aymansoliman-dev.github.io/mortgage-repayment-calculator-main/)
 
 ## My process
 
@@ -148,5 +148,6 @@ I must continue focusing on advanced JavaScript concepts to handle upcoming resp
 ## Author
 
 - Website - [Ayman Soliman](https://bento.me/ayman-soliman)
-- Frontend Mentor - [@ayman-soliman-1783](https://www.frontendmentor.io/profile/ayman-soliman-1783)
+- Frontend Mentor - [aymansoliman-dev](https://www.frontendmentor.io/profile/aymansoliman-dev)
 - Twitter - [@a_soliman1783](https://x.com/a_soliman1783)
+
